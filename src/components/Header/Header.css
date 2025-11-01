@@ -12,8 +12,14 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-md);
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-md) 0.75rem;
   min-height: 70px;
+}
+
+@media (min-width: 768px) {
+  .header__content {
+    padding: var(--spacing-md) 1rem;
+  }
 }
 
 .header__logo {
@@ -96,7 +102,7 @@
   display: none;
   flex: 1;
   max-width: 500px;
-  margin: 0 var(--spacing-md);
+  margin: 0;
 }
 
 @media (min-width: 768px) {

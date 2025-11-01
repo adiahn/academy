@@ -7,21 +7,21 @@ const Resources = () => {
       title: 'Lessons for Learners',
       count: '15417',
       description: 'Self-paced modules on entrepreneurship, business development, financial literacy, and skills training for aspiring entrepreneurs.',
-      color: 'blue'
+      color: 'accent-blue'
     },
     {
       id: 'assessments',
       title: 'Assessments and Quizzes',
       count: '140',
       description: 'Assessments and quizzes for entrepreneurs and educators to track progress in business skills, financial management, and entrepreneurial development.',
-      color: 'green'
+      color: 'primary'
     },
     {
       id: 'guides',
       title: 'Tips & Guides',
       count: '20',
       description: 'Informative articles, handouts, and guides for entrepreneurs and educators on topics related to business development, entrepreneurship, and financial literacy.',
-      color: 'light-green'
+      color: 'accent-amber'
     }
   ]
 

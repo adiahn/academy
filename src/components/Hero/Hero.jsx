@@ -3,8 +3,8 @@ import './Hero.css'
 const Hero = () => {
   const ctaButtons = [
     { label: "I'm a Learner", variant: 'primary' },
-    { label: "I'm an Educator", variant: 'secondary' },
-    { label: "I'm a Parent", variant: 'tertiary' },
+    { label: "I'm an Educator", variant: 'accent-blue' },
+    { label: "I'm a Parent", variant: 'accent-coral' },
   ]
 
   return (

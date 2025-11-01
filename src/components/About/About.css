@@ -130,27 +130,30 @@
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: var(--color-primary);
   border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .about__dot:nth-child(1) {
+  background-color: var(--color-accent-blue);
   top: 15%;
   right: 20%;
 }
 
 .about__dot:nth-child(2) {
+  background-color: var(--color-primary);
   top: 45%;
   right: 10%;
 }
 
 .about__dot:nth-child(3) {
+  background-color: var(--color-accent-coral);
   bottom: 25%;
   right: 25%;
 }
 
 .about__dot:nth-child(4) {
+  background-color: var(--color-accent-amber);
   top: 30%;
   left: 15%;
 }

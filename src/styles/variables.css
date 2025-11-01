@@ -6,6 +6,14 @@
   --color-secondary: #8fb87a;
   --color-secondary-light: #a8c99b;
   
+  /* Accent Colors */
+  --color-accent-blue: #6b9bd4;
+  --color-accent-blue-light: #8fb3d9;
+  --color-accent-coral: #e89a8b;
+  --color-accent-coral-light: #f0b5a8;
+  --color-accent-amber: #d4a574;
+  --color-accent-amber-light: #e4ba8f;
+  
   --color-white: #ffffff;
   --color-off-white: #f8f9f7;
   --color-light-grey: #f0f2ef;

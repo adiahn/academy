@@ -91,26 +91,26 @@
   box-shadow: 0 4px 12px rgba(90, 124, 74, 0.25);
 }
 
-.hero__cta--secondary {
-  background-color: var(--color-primary-dark);
+.hero__cta--accent-blue {
+  background-color: var(--color-accent-blue);
   color: var(--color-white);
 }
 
-.hero__cta--secondary:hover {
-  background-color: var(--color-primary);
+.hero__cta--accent-blue:hover {
+  background-color: var(--color-accent-blue-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(90, 124, 74, 0.25);
+  box-shadow: 0 4px 12px rgba(107, 155, 212, 0.3);
 }
 
-.hero__cta--tertiary {
-  background-color: var(--color-secondary);
+.hero__cta--accent-coral {
+  background-color: var(--color-accent-coral);
   color: var(--color-white);
 }
 
-.hero__cta--tertiary:hover {
-  background-color: var(--color-secondary-light);
+.hero__cta--accent-coral:hover {
+  background-color: var(--color-accent-coral-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(143, 184, 122, 0.25);
+  box-shadow: 0 4px 12px rgba(232, 154, 139, 0.3);
 }
 
 .hero__visual {

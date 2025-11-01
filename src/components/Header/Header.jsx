@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Search, Menu, X } from 'lucide-react'
 import './Header.css'
 
 const Header = () => {
@@ -76,7 +77,7 @@ const Header = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               <button type="submit" className="header__search-button" aria-label="Search">
-                <span className="header__search-icon">🔍</span>
+                <Search className="header__search-icon" size={18} />
               </button>
             </form>
           </div>
@@ -90,9 +91,11 @@ const Header = () => {
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
             >
-              <span className="header__mobile-toggle-icon"></span>
-              <span className="header__mobile-toggle-icon"></span>
-              <span className="header__mobile-toggle-icon"></span>
+              {isMobileMenuOpen ? (
+                <X className="header__mobile-toggle-icon" size={24} />
+              ) : (
+                <Menu className="header__mobile-toggle-icon" size={24} />
+              )}
             </button>
           </div>
         </div>

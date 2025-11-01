@@ -159,7 +159,6 @@
 }
 
 .header__search-icon {
-  font-size: 1.125rem;
   color: var(--color-white);
 }
 
@@ -225,20 +224,23 @@
 
 .header__mobile-toggle {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   padding: var(--spacing-xs);
   width: 32px;
   height: 32px;
-  justify-content: center;
+  cursor: pointer;
+  color: var(--color-primary);
+  transition: all var(--transition-fast);
+}
+
+.header__mobile-toggle:hover {
+  color: var(--color-primary-dark);
 }
 
 .header__mobile-toggle-icon {
-  width: 24px;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: all var(--transition-fast);
+  color: inherit;
 }
 
 @media (min-width: 768px) {

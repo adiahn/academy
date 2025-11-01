@@ -1,3 +1,4 @@
+import { MapPin, Mail, Facebook, Linkedin, MessageCircle, Youtube } from 'lucide-react'
 import './Footer.css'
 
 const Footer = () => {
@@ -25,10 +26,10 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { name: 'Facebook', icon: 'f', href: 'https://facebook.com' },
-    { name: 'LinkedIn', icon: 'in', href: 'https://linkedin.com' },
-    { name: 'WhatsApp', icon: '💬', href: 'https://wa.me' },
-    { name: 'YouTube', icon: '▶', href: 'https://youtube.com' },
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' },
   ]
 
   return (
@@ -44,18 +45,21 @@ const Footer = () => {
               Empowering entrepreneurship through quality digital education and continuous learning.
             </p>
             <div className="footer__social">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="footer__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {socialLinks.map((social) => {
+                const IconComponent = social.icon
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="footer__social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                  >
+                    <IconComponent size={20} />
+                  </a>
+                )
+              })}
             </div>
           </div>
 
@@ -89,11 +93,11 @@ const Footer = () => {
             <h3 className="footer__title">Contact</h3>
             <ul className="footer__contact">
               <li className="footer__contact-item">
-                <span className="footer__contact-icon">📍</span>
+                <MapPin className="footer__contact-icon" size={18} />
                 <span>Katsina, Nigeria</span>
               </li>
               <li className="footer__contact-item">
-                <span className="footer__contact-icon">✉</span>
+                <Mail className="footer__contact-icon" size={18} />
                 <span>contact@kaseda.ng</span>
               </li>
             </ul>

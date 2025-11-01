@@ -58,7 +58,9 @@
   border-radius: 8px;
   margin-bottom: var(--spacing-md);
   border: 2px solid;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .resources__card--accent-blue .resources__card-icon {
@@ -77,19 +79,6 @@
   background-color: rgba(255, 167, 38, 0.12);
   border-color: rgba(255, 167, 38, 0.35);
   color: var(--color-accent-amber);
-}
-
-.resources__card-icon::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 32px;
-  border: 2px solid currentColor;
-  border-radius: 2px;
-  opacity: 0.6;
 }
 
 .resources__card-count {

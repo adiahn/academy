@@ -2,6 +2,28 @@
   padding: var(--spacing-2xl) 0;
   background-color: var(--color-primary);
   color: var(--color-white);
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.resources::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.resources > * {
+  position: relative;
+  z-index: 1;
 }
 
 .resources__header {

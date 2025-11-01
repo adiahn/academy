@@ -1,13 +1,8 @@
+import { Play } from 'lucide-react'
 import './Hero.css'
 import heroImage from '../../assets/hero-student.png'
 
 const Hero = () => {
-  const ctaButtons = [
-    { label: "I'm a Learner", variant: 'primary' },
-    { label: "I'm an Educator", variant: 'accent-blue' },
-    { label: "I'm a Parent", variant: 'accent-coral' },
-  ]
-
   return (
     <section className="hero" id="home">
       <div className="container">
@@ -17,19 +12,17 @@ const Hero = () => {
             <p className="hero__subtitle">
               A comprehensive solution designed to empower entrepreneurship and close the skills gap
             </p>
-            <div className="hero__divider"></div>
             <p className="hero__description">
-              Enabling continuous access to quality entrepreneurship education and development
+              Enabling continuous access to quality entrepreneurship education and development for aspiring entrepreneurs, educators, and parents.
             </p>
             <div className="hero__ctas">
-              {ctaButtons.map((button) => (
-                <button
-                  key={button.label}
-                  className={`hero__cta hero__cta--${button.variant}`}
-                >
-                  {button.label}
-                </button>
-              ))}
+              <button className="hero__cta hero__cta--primary">
+                Get Started
+              </button>
+              <button className="hero__cta hero__cta--secondary">
+                <Play size={20} />
+                Watch Video
+              </button>
             </div>
           </div>
           <div className="hero__visual">

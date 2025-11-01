@@ -35,7 +35,7 @@ const Hero = () => {
             <div className="hero__visual-content">
               <img 
                 src="https://images.unsplash.com/photo-1509062522246-3b53a5c4b2b9?w=800&auto=format&fit=crop&q=80" 
-                alt="Black student with learning materials" 
+                alt="Black female student with learning materials" 
                 className="hero__image"
                 loading="lazy"
                 onError={(e) => {

@@ -12,13 +12,13 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-md);
-  padding: var(--spacing-md) 0.75rem;
+  padding: var(--spacing-md) 0.5rem;
   min-height: 70px;
 }
 
 @media (min-width: 768px) {
   .header__content {
-    padding: var(--spacing-md) 1rem;
+    padding: var(--spacing-md) 0.75rem;
   }
 }
 

@@ -1,25 +1,25 @@
 :root {
-  /* Color Theme - Soft White and Green */
-  --color-primary: #5a7c4a;
-  --color-primary-light: #7fa66d;
-  --color-primary-dark: #4a6b3d;
-  --color-secondary: #8fb87a;
-  --color-secondary-light: #a8c99b;
+  /* Color Theme - Sharp Green and White */
+  --color-primary: #4a7c2a;
+  --color-primary-light: #6ba83f;
+  --color-primary-dark: #3a6320;
+  --color-secondary: #7fb86f;
+  --color-secondary-light: #95c988;
   
-  /* Accent Colors */
-  --color-accent-blue: #6b9bd4;
-  --color-accent-blue-light: #8fb3d9;
-  --color-accent-coral: #e89a8b;
-  --color-accent-coral-light: #f0b5a8;
-  --color-accent-amber: #d4a574;
-  --color-accent-amber-light: #e4ba8f;
+  /* Accent Colors - Sharp and Vibrant */
+  --color-accent-blue: #4a90e2;
+  --color-accent-blue-light: #6ba8f0;
+  --color-accent-coral: #ff6b5a;
+  --color-accent-coral-light: #ff8a7d;
+  --color-accent-amber: #ffa726;
+  --color-accent-amber-light: #ffb74d;
   
   --color-white: #ffffff;
   --color-off-white: #f8f9f7;
   --color-light-grey: #f0f2ef;
-  --color-text-primary: #3d5a2f;
-  --color-text-secondary: #5a7c4a;
-  --color-text-muted: #7a9471;
+  --color-text-primary: #2d4a1f;
+  --color-text-secondary: #4a7c2a;
+  --color-text-muted: #6a8c5a;
   
   /* Typography */
   --font-family-primary: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

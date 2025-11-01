@@ -88,7 +88,7 @@
 .hero__cta--primary:hover {
   background-color: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(90, 124, 74, 0.25);
+  box-shadow: 0 4px 12px rgba(74, 124, 42, 0.3);
 }
 
 .hero__cta--accent-blue {
@@ -99,7 +99,7 @@
 .hero__cta--accent-blue:hover {
   background-color: var(--color-accent-blue-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 155, 212, 0.3);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.35);
 }
 
 .hero__cta--accent-coral {
@@ -110,7 +110,7 @@
 .hero__cta--accent-coral:hover {
   background-color: var(--color-accent-coral-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(232, 154, 139, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 107, 90, 0.35);
 }
 
 .hero__visual {
@@ -131,7 +131,7 @@
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(90, 124, 74, 0.15);
+    box-shadow: 0 10px 40px rgba(74, 124, 42, 0.2);
   }
 
   .hero__image {

@@ -22,7 +22,6 @@ const Header = () => {
         <div className="header__content">
           <div className="header__logo">
             <span className="header__logo-icon">K</span>
-            <span className="header__logo-text">KASEDA Digital Academy</span>
           </div>
 
           <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>

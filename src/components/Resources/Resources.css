@@ -1,0 +1,114 @@
+.resources {
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.resources__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.resources__title {
+  color: var(--color-white);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0;
+}
+
+.resources__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .resources__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resources__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resources__card {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  border-radius: 12px;
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.resources__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.resources__card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-md);
+  border: 2px solid;
+  position: relative;
+}
+
+.resources__card--blue .resources__card-icon {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.resources__card--green .resources__card-icon {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.resources__card--light-green .resources__card-icon {
+  background-color: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.resources__card-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 32px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.resources__card-count {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1;
+}
+
+.resources__card-title {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.3;
+}
+
+.resources__card-description {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+

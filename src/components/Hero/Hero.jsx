@@ -33,7 +33,12 @@ const Hero = () => {
           </div>
           <div className="hero__visual">
             <div className="hero__visual-content">
-              <div className="hero__circle"></div>
+              <img 
+                src="https://source.unsplash.com/83tkHLPgg2Q/800x800" 
+                alt="Student with learning materials" 
+                className="hero__image"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

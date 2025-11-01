@@ -1,6 +1,7 @@
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Resources from './components/Resources/Resources'
+import About from './components/About/About'
 
 /**
  * Main App Component
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Hero />
         <Resources />
+        <About />
       </main>
     </div>
   )

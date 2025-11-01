@@ -62,13 +62,19 @@ button {
 .container {
   width: 100%;
   max-width: 100%;
-  margin: 0;
-  padding: 0 0.5rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 0.75rem;
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-lg);
   }
 }
 

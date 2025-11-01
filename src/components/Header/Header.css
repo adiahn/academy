@@ -12,13 +12,19 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-md);
-  padding: var(--spacing-md) 0.5rem;
+  padding: var(--spacing-md) var(--spacing-sm);
   min-height: 70px;
 }
 
 @media (min-width: 768px) {
   .header__content {
-    padding: var(--spacing-md) 0.75rem;
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__content {
+    padding: var(--spacing-md) var(--spacing-lg);
   }
 }
 

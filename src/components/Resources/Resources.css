@@ -1,6 +1,6 @@
 .resources {
   padding: var(--spacing-2xl) 0;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -62,18 +62,21 @@
 }
 
 .resources__card--blue .resources__card-icon {
-  background-color: rgba(59, 130, 246, 0.1);
-  border-color: rgba(59, 130, 246, 0.3);
+  background-color: rgba(90, 124, 74, 0.08);
+  border-color: rgba(90, 124, 74, 0.25);
+  color: var(--color-primary);
 }
 
 .resources__card--green .resources__card-icon {
-  background-color: rgba(34, 197, 94, 0.1);
-  border-color: rgba(34, 197, 94, 0.3);
+  background-color: rgba(127, 166, 109, 0.08);
+  border-color: rgba(127, 166, 109, 0.25);
+  color: var(--color-primary-light);
 }
 
 .resources__card--light-green .resources__card-icon {
-  background-color: rgba(74, 222, 128, 0.1);
-  border-color: rgba(74, 222, 128, 0.3);
+  background-color: rgba(168, 201, 155, 0.08);
+  border-color: rgba(168, 201, 155, 0.25);
+  color: var(--color-secondary);
 }
 
 .resources__card-icon::after {
@@ -92,7 +95,7 @@
 .resources__card-count {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
   line-height: 1;
 }
@@ -100,7 +103,7 @@
 .resources__card-title {
   font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   margin-bottom: var(--spacing-md);
   line-height: 1.3;
 }

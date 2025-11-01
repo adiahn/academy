@@ -1,5 +1,5 @@
 import './Hero.css'
-import heroImage from '../assets/hero-student.png'
+import heroImage from '../../assets/hero-student.png'
 
 const Hero = () => {
   const ctaButtons = [

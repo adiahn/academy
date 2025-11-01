@@ -1,6 +1,8 @@
 // Export all components from a central location
+export { default as TopBar } from './TopBar/TopBar'
 export { default as Header } from './Header/Header'
 export { default as Hero } from './Hero/Hero'
 export { default as Resources } from './Resources/Resources'
 export { default as About } from './About/About'
+export { default as Footer } from './Footer/Footer'
 

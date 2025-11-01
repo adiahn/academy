@@ -4,6 +4,8 @@ import './Header.css'
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState('All Categories')
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -15,6 +17,15 @@ const Header = () => {
       // TODO: Implement search functionality
     }
   }
+
+  const categories = [
+    'All Categories',
+    'Business & Entrepreneurship',
+    'Finance & Accounting',
+    'Digital Marketing',
+    'Technology & IT',
+    'Management & Leadership',
+  ]
 
   const navItems = [
     { label: 'Home', href: '#home', active: true },
@@ -48,10 +59,40 @@ const Header = () => {
             </ul>
             <div className="header__search-mobile">
               <form className="header__search" onSubmit={handleSearch}>
+                <div className="header__search-category">
+                  <button
+                    type="button"
+                    className="header__category-button"
+                    onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                    onBlur={() => setTimeout(() => setIsCategoryOpen(false), 200)}
+                  >
+                    <span className="header__category-icon">☰</span>
+                    <span className="header__category-text">{selectedCategory}</span>
+                    <span className="header__category-arrow">▼</span>
+                  </button>
+                  {isCategoryOpen && (
+                    <div className="header__category-dropdown">
+                      {categories.map((category) => (
+                        <button
+                          key={category}
+                          type="button"
+                          className="header__category-option"
+                          onClick={() => {
+                            setSelectedCategory(category)
+                            setIsCategoryOpen(false)
+                          }}
+                        >
+                          {category}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="header__search-divider"></div>
                 <input
                   type="text"
                   className="header__search-input"
-                  placeholder="Search courses, lessons..."
+                  placeholder="Search For Course ..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
@@ -68,10 +109,40 @@ const Header = () => {
 
           <div className="header__search-desktop">
             <form className="header__search" onSubmit={handleSearch}>
+              <div className="header__search-category">
+                <button
+                  type="button"
+                  className="header__category-button"
+                  onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                  onBlur={() => setTimeout(() => setIsCategoryOpen(false), 200)}
+                >
+                  <span className="header__category-icon">☰</span>
+                  <span className="header__category-text">{selectedCategory}</span>
+                  <span className="header__category-arrow">▼</span>
+                </button>
+                {isCategoryOpen && (
+                  <div className="header__category-dropdown">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        type="button"
+                        className="header__category-option"
+                        onClick={() => {
+                          setSelectedCategory(category)
+                          setIsCategoryOpen(false)
+                        }}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="header__search-divider"></div>
               <input
                 type="text"
                 className="header__search-input"
-                placeholder="Search courses, lessons, or topics..."
+                placeholder="Search For Course ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />

@@ -34,10 +34,13 @@ const Hero = () => {
           <div className="hero__visual">
             <div className="hero__visual-content">
               <img 
-                src="https://source.unsplash.com/83tkHLPgg2Q/800x800" 
+                src="https://images.unsplash.com/photo-1509062522246-3b53a5c4b2b9?w=800&auto=format&fit=crop&q=80" 
                 alt="Student with learning materials" 
                 className="hero__image"
                 loading="lazy"
+                onError={(e) => {
+                  e.target.src = 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop&q=80'
+                }}
               />
             </div>
           </div>

@@ -1,4 +1,5 @@
 import './Hero.css'
+import heroImage from '../assets/Untitled design (19).png'
 
 const Hero = () => {
   const ctaButtons = [
@@ -34,14 +35,9 @@ const Hero = () => {
           <div className="hero__visual">
             <div className="hero__visual-content">
               <img 
-                src="https://images.unsplash.com/photo-1509062522246-3b53a5c4b2b9?w=800&auto=format&fit=crop&q=80" 
+                src={heroImage}
                 alt="Black female student with learning materials" 
                 className="hero__image"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.onerror = null
-                  e.target.src = 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop&q=80'
-                }}
               />
             </div>
           </div>

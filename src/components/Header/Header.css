@@ -97,7 +97,24 @@
   gap: var(--spacing-md);
 }
 
-.header__cta {
+.header__login {
+  display: none;
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 6px;
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9375rem;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.header__login:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--color-off-white);
+}
+
+.header__signup {
   display: none;
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -105,15 +122,18 @@
   border-radius: 6px;
   font-weight: var(--font-weight-medium);
   font-size: 0.9375rem;
-  transition: background-color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
-.header__cta:hover {
+.header__signup:hover {
   background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(74, 124, 42, 0.25);
 }
 
 @media (min-width: 768px) {
-  .header__cta {
+  .header__login,
+  .header__signup {
     display: block;
   }
 }
@@ -183,6 +203,51 @@
   }
 
   .header__nav-link--active::after {
+    display: none;
+  }
+
+  .header__mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-light-grey);
+  }
+
+  .header__mobile-login,
+  .header__mobile-signup {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9375rem;
+    transition: all var(--transition-fast);
+  }
+
+  .header__mobile-login {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+
+  .header__mobile-login:hover {
+    background-color: var(--color-off-white);
+  }
+
+  .header__mobile-signup {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+  }
+
+  .header__mobile-signup:hover {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+@media (min-width: 768px) {
+  .header__mobile-actions {
     display: none;
   }
 }

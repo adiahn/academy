@@ -38,10 +38,15 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <div className="header__mobile-actions">
+              <button className="header__mobile-login" onClick={() => setIsMobileMenuOpen(false)}>Login</button>
+              <button className="header__mobile-signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</button>
+            </div>
           </nav>
 
           <div className="header__actions">
-            <button className="header__cta">Get Started</button>
+            <button className="header__login">Login</button>
+            <button className="header__signup">Sign Up</button>
             <button
               className="header__mobile-toggle"
               onClick={toggleMobileMenu}

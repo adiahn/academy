@@ -3,9 +3,17 @@ import './Header.css'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // TODO: Implement search functionality
+    }
   }
 
   const navItems = [
@@ -38,11 +46,40 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <div className="header__search-mobile">
+              <form className="header__search" onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  className="header__search-input"
+                  placeholder="Search courses, lessons..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="submit" className="header__search-button" aria-label="Search">
+                  <span className="header__search-icon">🔍</span>
+                </button>
+              </form>
+            </div>
             <div className="header__mobile-actions">
               <button className="header__mobile-login" onClick={() => setIsMobileMenuOpen(false)}>Login</button>
               <button className="header__mobile-signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</button>
             </div>
           </nav>
+
+          <div className="header__search-desktop">
+            <form className="header__search" onSubmit={handleSearch}>
+              <input
+                type="text"
+                className="header__search-input"
+                placeholder="Search courses, lessons, or topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button type="submit" className="header__search-button" aria-label="Search">
+                <span className="header__search-icon">🔍</span>
+              </button>
+            </form>
+          </div>
 
           <div className="header__actions">
             <button className="header__login">Login</button>

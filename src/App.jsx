@@ -1,4 +1,3 @@
-import TopBar from './components/TopBar/TopBar'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Resources from './components/Resources/Resources'
@@ -12,7 +11,6 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <div className="app">
-      <TopBar />
       <Header />
       <main>
         <Hero />

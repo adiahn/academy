@@ -11,8 +11,7 @@ const TopBar = () => {
   const socialLinks = [
     { name: 'Facebook', icon: 'f', href: 'https://facebook.com' },
     { name: 'LinkedIn', icon: 'in', href: 'https://linkedin.com' },
-    { name: 'WhatsApp', icon: '💬', href: 'https://wa.me' },
-    { name: 'YouTube', icon: '▶', href: 'https://youtube.com' },
+  
   ]
 
   const handleSearch = (e) => {

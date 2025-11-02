@@ -11,6 +11,7 @@ const Resources = () => {
       title: 'Lessons for Learners',
       count: '15,417',
       description: 'Self-paced modules on entrepreneurship, business development, financial literacy, and skills training for aspiring entrepreneurs.',
+      hoverContent: 'Explore comprehensive learning modules designed to build your entrepreneurial skills from the ground up.',
       color: 'blue'
     },
     {
@@ -18,6 +19,7 @@ const Resources = () => {
       title: 'Assessments and Quizzes',
       count: '140',
       description: 'Assessments and quizzes for entrepreneurs and educators to track progress in business skills, financial management, and entrepreneurial development.',
+      hoverContent: 'Test your knowledge and track your progress with interactive assessments and detailed feedback.',
       color: 'green'
     },
     {
@@ -25,6 +27,7 @@ const Resources = () => {
       title: 'Tips & Guides',
       count: '20',
       description: 'Informative articles, handouts, and guides for entrepreneurs and educators on topics related to business development, entrepreneurship, and financial literacy.',
+      hoverContent: 'Access expert insights, practical tips, and actionable guides to accelerate your entrepreneurial journey.',
       color: 'amber'
     }
   ]
@@ -66,10 +69,15 @@ const Resources = () => {
               className={`resources__card resources__card--${resource.color} ${isVisible ? 'resources__card--visible' : ''}`}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="resources__card-content">
+              <div className="resources__card-front">
                 <div className="resources__card-count">{resource.count}</div>
                 <h3 className="resources__card-title">{resource.title}</h3>
                 <p className="resources__card-description">{resource.description}</p>
+              </div>
+              <div className="resources__card-back">
+                <h3 className="resources__card-title">{resource.title}</h3>
+                <p className="resources__card-hover-content">{resource.hoverContent}</p>
+                <button className="resources__card-button">Explore More</button>
               </div>
             </div>
           ))}

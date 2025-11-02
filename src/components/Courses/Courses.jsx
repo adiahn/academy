@@ -120,27 +120,25 @@ const Courses = () => {
                   className="courses__card-image"
                   loading="lazy"
                 />
-                <div className="courses__card-overlay">
-                  <span className="courses__card-category courses__card-category--overlay">{course.category}</span>
+                <span className="courses__card-category">{course.category}</span>
+                <div className="courses__card-rating">
+                  <Star size={16} fill="#ffa726" color="#ffa726" />
+                  <span>{course.rating}</span>
                 </div>
               </div>
               <div className="courses__card-content">
-                <div className="courses__card-header">
-                  <div className="courses__card-rating">
-                    <Star size={16} fill="#ffa726" color="#ffa726" />
-                    <span>{course.rating}</span>
-                  </div>
-                </div>
                 <h3 className="courses__card-title">{course.title}</h3>
                 <p className="courses__card-description">{course.description}</p>
-                <div className="courses__card-meta">
-                  <div className="courses__card-meta-item">
-                    <Clock size={16} />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="courses__card-meta-item">
-                    <Users size={16} />
-                    <span>{course.students}</span>
+                <div className="courses__card-footer">
+                  <div className="courses__card-meta">
+                    <div className="courses__card-meta-item">
+                      <Clock size={18} />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="courses__card-meta-item">
+                      <Users size={18} />
+                      <span>{course.students}</span>
+                    </div>
                   </div>
                   <div className="courses__card-level">{course.level}</div>
                 </div>

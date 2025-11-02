@@ -15,7 +15,8 @@ const Courses = () => {
       duration: '8 weeks',
       students: '2,450',
       rating: 4.8,
-      level: 'Beginner'
+      level: 'Beginner',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80'
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ const Courses = () => {
       duration: '6 weeks',
       students: '1,890',
       rating: 4.9,
-      level: 'Intermediate'
+      level: 'Intermediate',
+      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80'
     },
     {
       id: 3,
@@ -35,7 +37,8 @@ const Courses = () => {
       duration: '10 weeks',
       students: '3,120',
       rating: 4.7,
-      level: 'Advanced'
+      level: 'Advanced',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'
     },
     {
       id: 4,
@@ -45,7 +48,8 @@ const Courses = () => {
       duration: '7 weeks',
       students: '2,780',
       rating: 4.9,
-      level: 'Intermediate'
+      level: 'Intermediate',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
     },
     {
       id: 5,
@@ -55,7 +59,8 @@ const Courses = () => {
       duration: '5 weeks',
       students: '1,650',
       rating: 4.6,
-      level: 'Intermediate'
+      level: 'Intermediate',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'
     },
     {
       id: 6,
@@ -65,7 +70,8 @@ const Courses = () => {
       duration: '8 weeks',
       students: '1,230',
       rating: 4.8,
-      level: 'Advanced'
+      level: 'Advanced',
+      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80'
     }
   ]
 
@@ -107,9 +113,19 @@ const Courses = () => {
               className={`courses__card ${isVisible ? 'courses__card--visible' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <div className="courses__card-image-wrapper">
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="courses__card-image"
+                  loading="lazy"
+                />
+                <div className="courses__card-overlay">
+                  <span className="courses__card-category courses__card-category--overlay">{course.category}</span>
+                </div>
+              </div>
               <div className="courses__card-content">
                 <div className="courses__card-header">
-                  <span className="courses__card-category">{course.category}</span>
                   <div className="courses__card-rating">
                     <Star size={16} fill="#ffa726" color="#ffa726" />
                     <span>{course.rating}</span>

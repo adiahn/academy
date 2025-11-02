@@ -16,13 +16,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <VideoHighlight />
         <Resources />
         <Courses />
+        <VideoHighlight />
         <About />
       </main>
       <Footer />
-    </div>
+      </div>
   )
 }
 

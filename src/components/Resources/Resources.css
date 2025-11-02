@@ -188,3 +188,50 @@
   flex: 1;
 }
 
+.resources__card-hover-content {
+  font-size: clamp(0.9375rem, 1.25vw, 1rem);
+  color: #6b7280;
+  line-height: 1.7;
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.resources__card-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: var(--spacing-md);
+  align-self: center;
+}
+
+.resources__card--blue .resources__card-button {
+  background-color: #4a90e2;
+}
+
+.resources__card--blue .resources__card-button:hover {
+  background-color: #357abd;
+}
+
+.resources__card--green .resources__card-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.resources__card--amber .resources__card-button {
+  background-color: #ffa726;
+}
+
+.resources__card--amber .resources__card-button:hover {
+  background-color: #f57c00;
+}
+
+.resources__card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+

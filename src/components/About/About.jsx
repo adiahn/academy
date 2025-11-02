@@ -35,7 +35,6 @@ const About = () => {
       <div className="container">
         <div className="about__content">
           <div className={`about__text ${isVisible ? 'about__text--visible' : ''}`}>
-            <div className="about__badge">About Us</div>
             <h2 className="about__heading">About KASEDA Digital Academy</h2>
             <p className="about__subheading">A Platform and an Education Model</p>
             <div className="about__description">

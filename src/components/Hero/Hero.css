@@ -1,15 +1,22 @@
 .hero {
-  padding: var(--spacing-xl) 0 var(--spacing-2xl);
+  padding: var(--spacing-md) 0 var(--spacing-2xl);
   background-color: var(--color-white);
   position: relative;
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: flex-start;
-  padding-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
+  .hero {
+    padding-top: var(--spacing-lg);
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
   .hero {
     padding-top: var(--spacing-xl);
     align-items: center;

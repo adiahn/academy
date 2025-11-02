@@ -33,14 +33,16 @@
 
 .resources__title {
   color: var(--color-white);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
 .resources__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -60,43 +62,18 @@
 .resources__card {
   background-color: var(--color-white);
   color: var(--color-text-primary);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: var(--spacing-2xl);
   display: flex;
   flex-direction: column;
   transition: all var(--transition-normal);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   position: relative;
-  overflow: hidden;
-}
-
-.resources__card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, transparent);
-  transition: all var(--transition-normal);
-}
-
-.resources__card--blue::before {
-  background: linear-gradient(90deg, #4a90e2, #6ba8f0);
-}
-
-.resources__card--green::before {
-  background: linear-gradient(90deg, #4a7c2a, #6ba83f);
-}
-
-.resources__card--amber::before {
-  background: linear-gradient(90deg, #ffa726, #ffb74d);
 }
 
 .resources__card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .resources__card-content {
@@ -106,11 +83,11 @@
 }
 
 .resources__card-count {
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 800;
-  margin-bottom: var(--spacing-md);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .resources__card--blue .resources__card-count {
@@ -126,17 +103,17 @@
 }
 
 .resources__card-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  font-weight: 700;
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 600;
   color: #1f2937;
-  margin-bottom: var(--spacing-md);
-  line-height: 1.3;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
 }
 
 .resources__card-description {
-  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  font-size: clamp(0.875rem, 1.25vw, 1rem);
   color: #6b7280;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
   flex: 1;
 }

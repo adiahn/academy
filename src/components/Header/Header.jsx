@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Search, Menu, X } from 'lucide-react'
 import './Header.css'
 
@@ -29,9 +30,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__content">
-          <div className="header__logo">
+          <Link to="/" className="header__logo">
             <span className="header__logo-icon">K</span>
-          </div>
+          </Link>
 
           <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
             <ul className="header__nav-list">
@@ -62,7 +63,7 @@ const Header = () => {
               </form>
             </div>
             <div className="header__mobile-actions">
-              <button className="header__mobile-login" onClick={() => setIsMobileMenuOpen(false)}>Login</button>
+              <Link to="/login" className="header__mobile-login" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
               <button className="header__mobile-signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</button>
             </div>
           </nav>
@@ -83,7 +84,7 @@ const Header = () => {
           </div>
 
           <div className="header__actions">
-            <button className="header__login">Login</button>
+            <Link to="/login" className="header__login">Login</Link>
             <button className="header__signup">Sign Up</button>
             <button
               className="header__mobile-toggle"

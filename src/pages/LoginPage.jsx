@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './LoginPage.css'
 
 const LoginPage = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -18,6 +19,7 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Login attempt:', formData)
+    navigate('/dashboard')
   }
 
   return (

@@ -1,24 +1,36 @@
 import './Hero.css'
+import heroImage from '../../assets/hero-student.png'
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      <div className="hero__background">
-        <div className="hero__overlay"></div>
-      </div>
       <div className="container">
         <div className="hero__content">
-          <h1 className="hero__title">
-            Empowering Entrepreneurs Through Quality Education
-          </h1>
-          <p className="hero__description">
-            An online e-learning platform with mobile and offline capability that enables 
-            continuous access to quality entrepreneurship education. Empowering entrepreneurs 
-            with comprehensive business development resources to strengthen Nigeria's economy.
-          </p>
-          <button className="hero__cta">
-            Start Learning
-          </button>
+          <div className="hero__text">
+            <h1 className="hero__title">
+              Meet KASEDA Digital Academy
+            </h1>
+            <p className="hero__subtitle">
+              Unlock your entrepreneurial potential with comprehensive business education 
+              and skills development through our flexible online learning platform.
+            </p>
+            <button className="hero__cta">
+              Learn more
+            </button>
+          </div>
+          <div className="hero__visual">
+            <div className="hero__image-wrapper">
+              <img 
+                src={heroImage}
+                alt="KASEDA Digital Academy" 
+                className="hero__image"
+              />
+              <div className="hero__badge">
+                <div className="hero__badge-icon">K</div>
+                <span className="hero__badge-text">Digital Learning</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, Menu, X } from 'lucide-react'
+import { Search, Menu, X, ChevronDown, ShoppingCart, User } from 'lucide-react'
 import './Header.css'
 
 const Header = () => {
@@ -19,10 +19,10 @@ const Header = () => {
   }
 
   const navItems = [
-    { label: 'Home', href: '#home', active: true },
+    { label: 'Home', href: '#home' },
     { label: 'Courses', href: '#courses' },
-    { label: 'About Us', href: '#about' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'About', href: '#about' },
+    { label: 'Resources', href: '#resources' },
     { label: 'Contact', href: '#contact' },
   ]
 
@@ -31,16 +31,16 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <Link to="/" className="header__logo">
-            <span className="header__logo-icon">K</span>
+            <span className="header__logo-text">KASEDA</span>
           </Link>
 
           <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
             <ul className="header__nav-list">
               {navItems.map((item) => (
-                <li key={item.label} className="header__nav-item">
+                <li key={item.label}>
                   <a
                     href={item.href}
-                    className={`header__nav-link ${item.active ? 'header__nav-link--active' : ''}`}
+                    className="header__nav-link"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -48,44 +48,16 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <div className="header__search-mobile">
-              <form className="header__search" onSubmit={handleSearch}>
-                <input
-                  type="text"
-                  className="header__search-input"
-                  placeholder="Search For Course ..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <button type="submit" className="header__search-button" aria-label="Search">
-                  <span className="header__search-icon">🔍</span>
-                </button>
-              </form>
-            </div>
-            <div className="header__mobile-actions">
-              <Link to="/login" className="header__mobile-login" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
-              <button className="header__mobile-signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</button>
-            </div>
           </nav>
 
-          <div className="header__search-desktop">
-            <form className="header__search" onSubmit={handleSearch}>
-              <input
-                type="text"
-                className="header__search-input"
-                placeholder="Search For Course ..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button type="submit" className="header__search-button" aria-label="Search">
-                <Search className="header__search-icon" size={18} />
-              </button>
-            </form>
-          </div>
-
           <div className="header__actions">
-            <Link to="/login" className="header__login">Login</Link>
-            <button className="header__signup">Sign Up</button>
+            <button className="header__search-btn" aria-label="Search">
+              <Search size={20} />
+            </button>
+            <Link to="/login" className="header__signin">
+              <User size={18} />
+              <span>Sign in</span>
+            </Link>
             <button
               className="header__mobile-toggle"
               onClick={toggleMobileMenu}
@@ -93,9 +65,9 @@ const Header = () => {
               aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? (
-                <X className="header__mobile-toggle-icon" size={24} />
+                <X size={24} />
               ) : (
-                <Menu className="header__mobile-toggle-icon" size={24} />
+                <Menu size={24} />
               )}
             </button>
           </div>
@@ -106,4 +78,3 @@ const Header = () => {
 }
 
 export default Header
-

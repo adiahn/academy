@@ -72,7 +72,7 @@
     transform: translateX(-100%);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+
   .dashboard__sidebar--open {
     transform: translateX(0);
   }
@@ -227,7 +227,7 @@
     width: calc(100% - 530px);
     max-width: calc(100% - 530px);
   }
-  
+
   .dashboard__rightbar {
     width: 280px;
   }
@@ -274,7 +274,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-fast);
   }
-  
+
   .dashboard__mobile-toggle:hover {
     background-color: var(--color-off-white);
   }
@@ -419,11 +419,23 @@
 
 .dashboard__progress-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .dashboard__progress-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .dashboard__progress-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .dashboard__progress-card {
@@ -529,10 +541,22 @@
 
 .dashboard__continue-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .dashboard__continue-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .dashboard__continue-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .dashboard__continue-card {
@@ -596,6 +620,7 @@
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -641,6 +666,26 @@
   padding: var(--spacing-lg);
   border-bottom: 1px solid var(--color-light-grey);
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .dashboard__mentor-row {
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard__mentor-row {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .dashboard__mentor-course {
+    grid-column: 1 / -1;
+  }
 }
 
 .dashboard__mentor-row:last-child {
@@ -965,51 +1010,51 @@
   .dashboard__banner {
     padding: var(--spacing-lg);
   }
-  
+
   .dashboard__banner-title {
     font-size: 1.5rem;
   }
-  
+
   .dashboard__progress-cards {
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
   }
-  
+
   .dashboard__progress-card {
     padding: var(--spacing-md);
   }
-  
+
   .dashboard__continue-cards {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .dashboard__continue-image {
     height: 150px;
   }
-  
+
   .dashboard__mentor-row {
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
   }
-  
+
   .dashboard__mentor-row--header {
     display: none;
   }
-  
+
   .dashboard__mentor-name-date {
     margin-bottom: var(--spacing-xs);
   }
-  
+
   .dashboard__section {
     margin-bottom: var(--spacing-lg);
   }
-  
+
   .dashboard__search {
     width: 100%;
   }
-  
+
   .dashboard__send-btn {
     width: 100%;
     max-width: 200px;
@@ -1020,45 +1065,60 @@
   .dashboard__main {
     padding: var(--spacing-sm);
   }
-  
+
   .dashboard__header {
     margin-top: calc(var(--spacing-sm) + 60px);
   }
-  
+
   .dashboard__banner {
     padding: var(--spacing-md);
   }
-  
+
   .dashboard__banner-title {
     font-size: 1.25rem;
   }
-  
+
   .dashboard__banner-btn {
     width: 100%;
     justify-content: center;
   }
-  
+
   .dashboard__progress-card {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-sm);
   }
-  
+
   .dashboard__continue-title {
     font-size: 0.875rem;
   }
-  
+
   .dashboard__mentor-action {
     width: 100%;
     text-align: center;
   }
-  
+
   .dashboard__profile-actions {
     flex-wrap: wrap;
   }
-  
+
   .dashboard__chart-bars {
     gap: 4px;
   }
-}
+}@media (max-width: 540px) {
+    .dashboard__progress-cards {
+        grid-template-columns: 1fr;
+    }
 
+    .dashboard__continue-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard__continue-image {
+        height: 160px;
+    }
+
+    .dashboard__send-btn {
+        width: 100%;
+    }
+}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import './About.css'
 
 const About = () => {
@@ -30,36 +30,54 @@ const About = () => {
     }
   }, [])
 
+  const highlights = [
+    'Online & offline learning capabilities',
+    'Mobile-optimized platform',
+    'Expert-led entrepreneurship courses',
+    'Comprehensive business resources'
+  ]
+
   return (
     <section className="about" id="about" ref={sectionRef}>
       <div className="container">
         <div className="about__content">
           <div className={`about__text ${isVisible ? 'about__text--visible' : ''}`}>
             <h2 className="about__heading">About KASEDA Digital Academy</h2>
-            <p className="about__subheading">A Platform and an Education Model</p>
+            <p className="about__subheading">Empowering Entrepreneurs Through Quality Digital Education</p>
+
             <div className="about__description">
               <p>
-                KASEDA Digital Academy is an online e-learning platform with mobile and offline capability 
-                that enables continuous access to quality entrepreneurship education. It is highly flexible 
-                and adaptable, allowing learners and educators to easily access comprehensive business development 
-                resources and use it to complement existing learning efforts.
+                KASEDA Digital Academy is an innovative e-learning platform designed to democratize
+                access to quality entrepreneurship education. With advanced mobile and offline capabilities,
+                we ensure continuous learning regardless of internet connectivity challenges.
               </p>
               <p>
-                The platform has been developed with a unique suite of online and offline functions that caters 
-                for deployment in places with poor connectivity - often locations where aspiring entrepreneurs 
-                find themselves unable to access quality digital education, tools and content.
+                Our platform serves aspiring entrepreneurs in emerging markets, providing comprehensive
+                business development resources, expert-led courses, and practical tools that complement
+                and enhance existing educational efforts.
               </p>
             </div>
+
+            <ul className="about__highlights">
+              {highlights.map((highlight, index) => (
+                <li key={index} className="about__highlight-item">
+                  <Check size={20} />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+
             <button className="about__cta">
-              Learn More
+              Learn More About Us
               <ArrowRight size={18} />
             </button>
           </div>
+
           <div className={`about__visual ${isVisible ? 'about__visual--visible' : ''}`}>
             <div className="about__image-wrapper">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" 
-                alt="Students and educators collaborating" 
+              <img
+                src="https://images.unsplash.com/photo-5222202176988-66273c2fd55f?w=800&q=80"
+                alt="Students collaborating and learning together"
                 className="about__image"
                 loading="lazy"
               />
@@ -72,4 +90,3 @@ const About = () => {
 }
 
 export default About
-

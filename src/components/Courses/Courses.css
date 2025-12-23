@@ -50,19 +50,18 @@
   }
 }
 
-/* 2 columns only for medium-large desktops */
-@media (min-width: 1100px) and (max-width: 1399px) {
+/* 2 columns for larger screens - stays at 2 even on full screen for wider cards */
+@media (min-width: 1100px) {
   .courses__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-2xl);
   }
 }
 
-/* 3 columns for large screens */
-@media (min-width: 1400px) {
+/* Increase gap on very large screens for better spacing */
+@media (min-width: 1600px) {
   .courses__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-2xl);
+    gap: calc(var(--spacing-2xl) + var(--spacing-lg));
   }
 }
 

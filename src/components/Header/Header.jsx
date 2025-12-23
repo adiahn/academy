@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, Menu, X, ChevronDown, ShoppingCart, User } from 'lucide-react'
+import logo from '../../assets/logo.png'
 import './Header.css'
 
 const Header = () => {
@@ -19,9 +20,9 @@ const Header = () => {
   }
 
   const navItems = [
-    { label: 'Home', href: '#home' },
+    { label: 'Home', href: '#home', path: '/' },
     { label: 'Courses', href: '#courses' },
-    { label: 'About', href: '#about' },
+    { label: 'About', path: '/about' },
     { label: 'Resources', href: '#resources' },
     { label: 'Contact', href: '#contact' },
   ]
@@ -31,20 +32,30 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <Link to="/" className="header__logo">
-            <span className="header__logo-text">KASEDA</span>
+            <img src={logo} alt="KASEDA Digital Academy" className="header__logo-img" />
           </Link>
 
           <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
             <ul className="header__nav-list">
               {navItems.map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="header__nav-link"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
+                  {item.path ? (
+                    <Link
+                      to={item.path}
+                      className="header__nav-link"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="header__nav-link"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,0 +1,383 @@
+/* About Page Styles */
+
+.about-page {
+    min-height: 100vh;
+    background-color: var(--color-white);
+}
+
+/* Hero Section */
+.about-page__hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: calc(var(--spacing-2xl) * 2) 0 var(--spacing-2xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-page__hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.about-page__hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--color-white);
+    font-weight: 800;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Mission Section */
+.about-page__mission {
+    padding: calc(var(--spacing-2xl) * 2) 0;
+    background-color: var(--color-white);
+}
+
+.about-page__mission-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+}
+
+@media (min-width: 1000px) {
+    .about-page__mission-content {
+        grid-template-columns: 400px 1fr;
+        gap: calc(var(--spacing-2xl) * 2);
+    }
+}
+
+.about-page__mission-image {
+    position: relative;
+}
+
+.about-page__image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-weight: 600;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+}
+
+.about-page__mission-text {
+    flex: 1;
+}
+
+.about-page__mission-title {
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.about-page__mission-description {
+    margin-bottom: var(--spacing-xl);
+}
+
+.about-page__mission-description p {
+    font-size: 1.0625rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-page__mission-description p:last-child {
+    margin-bottom: 0;
+}
+
+.about-page__director {
+    padding: var(--spacing-lg);
+    background-color: var(--color-off-white);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+.about-page__director-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.about-page__director-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.about-page__director-org {
+    font-size: 0.9375rem;
+    color: #6b7280;
+}
+
+/* Strategic Objectives Section */
+.about-page__objectives {
+    padding: calc(var(--spacing-2xl) * 2) 0;
+    background-color: var(--color-off-white);
+}
+
+.about-page__objectives-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: #1f2937;
+}
+
+.text-highlight {
+    color: #fbbf24;
+}
+
+.about-page__objectives-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+@media (min-width: 1000px) {
+    .about-page__objectives-content {
+        grid-template-columns: 1fr 1.2fr;
+        gap: calc(var(--spacing-2xl) * 2);
+        align-items: center;
+    }
+}
+
+.about-page__objectives-image {
+    order: 2;
+}
+
+@media (min-width: 1000px) {
+    .about-page__objectives-image {
+        order: 1;
+    }
+}
+
+.about-page__image-placeholder-horizontal {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-weight: 600;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.about-page__objectives-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    order: 1;
+}
+
+@media (min-width: 1000px) {
+    .about-page__objectives-list {
+        order: 2;
+    }
+}
+
+.about-page__objective-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.about-page__objective-item--visible {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-page__objective-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 16px rgba(74, 124, 42, 0.15);
+}
+
+.about-page__objective-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(74, 124, 42, 0.3);
+}
+
+.about-page__objective-content {
+    flex: 1;
+}
+
+.about-page__objective-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.about-page__objective-description {
+    font-size: 0.9375rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-page__objectives-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.about-page__cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(74, 124, 42, 0.3);
+}
+
+.about-page__cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 124, 42, 0.4);
+}
+
+/* Executive Governor Section */
+.about-page__governor {
+    padding: calc(var(--spacing-2xl) * 2) 0;
+    background-color: var(--color-white);
+}
+
+.about-page__section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: #1f2937;
+}
+
+.about-page__governor-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    align-items: start;
+}
+
+@media (min-width: 1000px) {
+    .about-page__governor-content {
+        grid-template-columns: 400px 1fr;
+        gap: calc(var(--spacing-2xl) * 2);
+    }
+}
+
+.about-page__governor-image {
+    position: relative;
+}
+
+.about-page__governor-text {
+    flex: 1;
+}
+
+.about-page__governor-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: var(--spacing-xs);
+}
+
+.about-page__governor-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-page__governor-message p {
+    font-size: 1.0625rem;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-page__governor-message p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 999px) {
+    .about-page__hero {
+        padding: calc(var(--spacing-2xl) + var(--spacing-lg)) 0 var(--spacing-xl);
+    }
+
+    .about-page__mission,
+    .about-page__objectives,
+    .about-page__governor {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .about-page__mission-content,
+    .about-page__governor-content {
+        gap: var(--spacing-xl);
+    }
+
+    .about-page__objectives-content {
+        gap: var(--spacing-xl);
+    }
+
+    .about-page__objective-item {
+        padding: var(--spacing-md);
+    }
+
+    .about-page__objective-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .about-page__cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

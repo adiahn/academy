@@ -16,7 +16,7 @@ const Courses = () => {
       students: '2,450',
       rating: 4.8,
       level: 'Beginner',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80'
+      image: 'https://cdn.educba.com/academy/wp-content/uploads/2024/03/Essay-on-Entrepreneurship.jpg'
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Courses = () => {
       students: '1,890',
       rating: 4.9,
       level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80'
+      image: 'https://mintyn.com/wp-content/uploads/2024/03/Financial-Literacy-and-Money-Management.jpg'
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ const Courses = () => {
       students: '3,120',
       rating: 4.7,
       level: 'Advanced',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80'
+      image: 'https://qlabdigital.com/wp-content/uploads/2021/09/Business-Development-Strategies-1.png'
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ const Courses = () => {
       students: '2,780',
       rating: 4.9,
       level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
+      image: 'https://neilpatel.com/wp-content/uploads/2017/09/Why-Every-Entrepreneur-Needs-to-be-Savvy-in-Digital-Marketing-in-Order-to-Survive.jpg'
     },
     {
       id: 5,
@@ -60,7 +60,7 @@ const Courses = () => {
       students: '1,650',
       rating: 4.6,
       level: 'Intermediate',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'
+      image: 'https://www.ismartrecruit.com/upload/blog/main_image/Top_7_Leadership_Styles_Every_Professional_Should_Know.webp'
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ const Courses = () => {
       students: '1,230',
       rating: 4.8,
       level: 'Advanced',
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80'
+      image: 'https://cdn.educba.com/academy/wp-content/uploads/2016/09/Social-Entrepreneurship-1.jpg'
     }
   ]
 

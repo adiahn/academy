@@ -24,6 +24,18 @@
   flex-shrink: 0;
 }
 
+.header__logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .header__logo-img {
+    height: 38px;
+  }
+}
+
 .header__logo-text {
   font-size: 1.5rem;
   font-weight: 800;

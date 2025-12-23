@@ -1,5 +1,6 @@
 import './Hero.css'
 import { useState } from 'react'
+import heroBackground from '../../assets/WhatsApp Image 2025-12-18 at 07.53.32.jpeg'
 
 const Hero = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -11,17 +12,12 @@ const Hero = () => {
     }
   }
 
-  const backgroundImageUrl = 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80'
-
   return (
-    <section className="hero" id="home" style={{ '--hero-bg-image': `url(${backgroundImageUrl})` }}>
+    <section className="hero" id="home" style={{ '--hero-bg-image': `url(${heroBackground})` }}>
       <div className="hero__overlay"></div>
       <div className="hero__container">
         <div className="hero__content">
           <div className="hero__main">
-            <div className="hero__badge">
-              <span className="hero__badge-text">Trusted by Entrepreneurs Worldwide</span>
-            </div>
             <h1 className="hero__title">
               Learn Business Skills from Industry Experts
             </h1>

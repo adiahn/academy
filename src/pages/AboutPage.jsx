@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Target, Users, Briefcase, TrendingUp, Award, ArrowRight } from 'lucide-react'
+import Header from '../components/Header/Header'
 import './AboutPage.css'
 
 const AboutPage = () => {
@@ -60,6 +61,7 @@ const AboutPage = () => {
 
     return (
         <div className="about-page">
+            <Header />
             {/* Hero Section */}
             <section className="about-page__hero">
                 <div className="container">
@@ -174,17 +176,37 @@ const AboutPage = () => {
                         </div>
 
                         <div className="about-page__governor-text">
-                            <h3 className="about-page__governor-name">His Excellency, [Governor Name]</h3>
-                            <p className="about-page__governor-title">Executive Governor, Katsina State</p>
+                            <h3 className="about-page__governor-name">His Excellency, Dikko Umar Radda, PhD</h3>
+                            <p className="about-page__governor-title">Executive Governor, Katsina State | Gwagwaren Katsina</p>
 
                             <div className="about-page__governor-message">
                                 <p>
-                                    [Governor's message about KASEDA, commitment to entrepreneurship development,
-                                    vision for economic growth in Katsina State, and support for small and medium enterprises.]
+                                    As the Executive Governor of Katsina State, I am deeply committed to fostering an
+                                    environment where entrepreneurship and innovation flourish. The establishment of the
+                                    Katsina State Enterprise Development Agency (KASEDA) represents our administration's
+                                    unwavering dedication to empowering Micro, Small, and Medium Enterprises (MSMEs) –
+                                    the backbone of our economy and the key to sustainable development and job creation.
                                 </p>
                                 <p>
-                                    [Additional paragraphs about the importance of digital learning, youth empowerment,
-                                    and the role of KASEDA in transforming the business landscape of Northern Nigeria.]
+                                    KASEDA Digital Academy is not just an educational platform; it is a transformative
+                                    initiative designed to equip our youths, entrepreneurs, and business owners with
+                                    world-class knowledge and practical skills needed to thrive in today's competitive
+                                    global marketplace. Through data-driven governance and strategic investment in human
+                                    capital development, we are building a resilient and prosperous Katsina State.
+                                </p>
+                                <p>
+                                    Our vision extends beyond mere training. With the establishment of the N10 billion
+                                    MSME Growth Fund and our commitment to reducing out-of-school children while promoting
+                                    agricultural innovation and infrastructure development, we are creating a comprehensive
+                                    ecosystem where businesses can start, grow, and succeed. I encourage all aspiring and
+                                    established entrepreneurs to leverage this platform as we work together to build a
+                                    thriving business landscape that will benefit not only Katsina State but Northern
+                                    Nigeria and the entire nation.
+                                </p>
+                                <p>
+                                    Let us embrace this opportunity to learn, innovate, and create the prosperous future
+                                    we all envision. Together, we will transform challenges into opportunities and dreams
+                                    into reality.
                                 </p>
                             </div>
                         </div>

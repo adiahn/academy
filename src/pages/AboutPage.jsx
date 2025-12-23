@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Target, Users, Briefcase, TrendingUp, Award, ArrowRight } from 'lucide-react'
 import Header from '../components/Header/Header'
+import heroBackground from '../assets/WhatsApp Image 2025-12-18 at 07.53.32.jpeg'
 import './AboutPage.css'
 
 const AboutPage = () => {
@@ -63,7 +64,8 @@ const AboutPage = () => {
         <div className="about-page">
             <Header />
             {/* Hero Section */}
-            <section className="about-page__hero">
+            <section className="about-page__hero" style={{ '--about-hero-bg-image': `url(${heroBackground})` }}>
+                <div className="about-page__hero-overlay"></div>
                 <div className="container">
                     <h1 className="about-page__hero-title">About Us</h1>
                 </div>

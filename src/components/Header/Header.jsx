@@ -23,7 +23,7 @@ const Header = () => {
     { label: 'Home', href: '#home', path: '/' },
     { label: 'Courses', href: '#courses' },
     { label: 'About', path: '/about' },
-    { label: 'Resources', href: '#resources' },
+    { label: 'Blog', path: '/blog' },
     { label: 'Contact', href: '#contact' },
   ]
 

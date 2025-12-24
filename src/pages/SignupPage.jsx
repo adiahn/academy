@@ -1,4 +1,3 @@
-```javascript
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Lock, User, Phone, Eye, EyeOff } from 'lucide-react'
@@ -200,4 +199,3 @@ const SignupPage = () => {
 }
 
 export default SignupPage
-```

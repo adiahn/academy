@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard'
 import InboxPage from './pages/InboxPage'
 import AboutPage from './pages/AboutPage'
 import BlogPage from './pages/BlogPage'
+import ContactPage from './pages/ContactPage'
+import SupportPage from './pages/SupportPage'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/support" element={<SupportPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/dashboard" element={<Dashboard />} />

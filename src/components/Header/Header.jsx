@@ -24,7 +24,7 @@ const Header = () => {
     { label: 'Courses', href: '#courses' },
     { label: 'About', path: '/about' },
     { label: 'Blog', path: '/blog' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', path: '/contact' },
   ]
 
   return (
@@ -68,6 +68,9 @@ const Header = () => {
             <Link to="/login" className="header__signin">
               <User size={18} />
               <span>Sign in</span>
+            </Link>
+            <Link to="/signup" className="header__signup">
+              <span>Sign up</span>
             </Link>
             <button
               className="header__mobile-toggle"

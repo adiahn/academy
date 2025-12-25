@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { MapPin, Mail, Facebook, Linkedin, MessageCircle, Youtube } from 'lucide-react'
 import './Footer.css'
 
@@ -6,17 +7,17 @@ const Footer = () => {
 
   const footerLinks = {
     quickLinks: [
-      { label: 'Home', href: '#home' },
+      { label: 'Home', href: '/', isRoute: true },
       { label: 'Courses', href: '#courses' },
-      { label: 'About Us', href: '#about' },
-      { label: 'FAQ', href: '#faq' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'About Us', path: '/about', isRoute: true },
+      { label: 'Blog', path: '/blog', isRoute: true },
+      { label: 'Contact', path: '/contact', isRoute: true },
     ],
     resources: [
-      { label: 'Lessons', href: '#lessons' },
-      { label: 'Assessments', href: '#assessments' },
+      { label: 'Sign in', href: '/login', isRoute: true },
+      { label: 'Sign up', href: '/signup', isRoute: true },
       { label: 'Tips & Guides', href: '#guides' },
-      { label: 'Support', href: '#support' },
+      { label: 'Support', href: '/support', isRoute: true },
     ],
     legal: [
       { label: 'Privacy Policy', href: '#privacy' },
@@ -38,7 +39,6 @@ const Footer = () => {
         <div className="footer__content">
           <div className="footer__section">
             <div className="footer__logo">
-              <span className="footer__logo-icon">K</span>
               <span className="footer__logo-text">KASEDA Digital Academy</span>
             </div>
             <p className="footer__description">
@@ -68,9 +68,15 @@ const Footer = () => {
             <ul className="footer__links">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="footer__link">
-                    {link.label}
-                  </a>
+                  {link.isRoute ? (
+                    <Link to={link.href || link.path} className="footer__link">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="footer__link">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -81,9 +87,15 @@ const Footer = () => {
             <ul className="footer__links">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="footer__link">
-                    {link.label}
-                  </a>
+                  {link.isRoute ? (
+                    <Link to={link.href} className="footer__link">
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a href={link.href} className="footer__link">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import bgImage from '../../assets/bg.jpeg'
 import './Resources.css'
 
 const Resources = () => {
@@ -58,6 +59,9 @@ const Resources = () => {
 
   return (
     <section className="resources" id="courses" ref={sectionRef}>
+      <div className="resources__background">
+        <img src={bgImage} alt="Background" className="resources__bg-image" />
+      </div>
       <div className="container">
         <div className={`resources__header ${isVisible ? 'resources__header--visible' : ''}`}>
           <h2 className="resources__title">Content & Resources for Learners</h2>

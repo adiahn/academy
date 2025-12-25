@@ -1,6 +1,5 @@
 import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
-import VideoHighlight from '../components/VideoHighlight/VideoHighlight'
 import Resources from '../components/Resources/Resources'
 import Courses from '../components/Courses/Courses'
 import About from '../components/About/About'
@@ -15,7 +14,6 @@ const Home = () => {
         <About />
         <Resources />
         <Courses />
-        <VideoHighlight />
       </main>
       <Footer />
     </div>

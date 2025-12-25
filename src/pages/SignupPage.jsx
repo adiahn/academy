@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Lock, User, Phone, Eye, EyeOff } from 'lucide-react'
+import Footer from '../components/Footer/Footer'
 import logo from '../assets/logo.png'
 import './SignupPage.css'
 
@@ -194,6 +195,7 @@ const SignupPage = () => {
                     </form>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

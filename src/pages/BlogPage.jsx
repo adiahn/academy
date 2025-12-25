@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Calendar, Clock, User, ArrowRight, Search, Tag } from 'lucide-react'
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import './BlogPage.css'
 
 const BlogPage = () => {
@@ -224,6 +225,7 @@ const BlogPage = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }

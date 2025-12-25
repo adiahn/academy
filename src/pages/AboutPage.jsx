@@ -63,7 +63,7 @@ const AboutPage = () => {
 
                     <div className="about-leader">
                         <div className="about-leader__photo">
-                            <div className="about-leader__placeholder">Governor Photo</div>
+                            <img src={governorImage} alt="His Excellency, Dikko Umar Radda" className="about-leader__image" />
                         </div>
                         <div className="about-leader__info">
                             <h3 className="about-leader__name">His Excellency, Dikko Umar Radda, PhD, CON</h3>
@@ -83,7 +83,7 @@ const AboutPage = () => {
 
                     <div className="about-leader about-leader--reverse">
                         <div className="about-leader__photo">
-                            <div className="about-leader__placeholder">Director General Photo</div>
+                            <img src={dgImage} alt="Director General" className="about-leader__image" />
                         </div>
                         <div className="about-leader__info">
                             <h3 className="about-leader__name">Director General</h3>

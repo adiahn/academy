@@ -83,6 +83,16 @@
     position: relative;
 }
 
+.about-leader__image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
 .about-leader__placeholder {
     width: 100%;
     max-width: 400px;

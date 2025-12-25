@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
+import heroStudentImage from '../../assets/hero-student.png'
 import './About.css'
 
 const About = () => {
@@ -76,7 +77,7 @@ const About = () => {
           <div className={`about__visual ${isVisible ? 'about__visual--visible' : ''}`}>
             <div className="about__image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-5222202176988-66273c2fd55f?w=800&q=80"
+                src={heroStudentImage}
                 alt="Students collaborating and learning together"
                 className="about__image"
                 loading="lazy"
